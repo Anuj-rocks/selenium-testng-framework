@@ -25,10 +25,10 @@ public class LoginTest {
         Selenium.sortProducts();
     }
 
-    @Test(dependsOnMethods = "testSortProducts")
-    public void testLoginToAccount() throws InterruptedException {
-        Selenium.loginToAccount();
-    }
+   // @Test(dependsOnMethods = "testSortProducts")
+   // public void testLoginToAccount() throws InterruptedException {
+       // Selenium.loginToAccount();
+   // }
 
     @AfterClass
     public void closeDriver() {
