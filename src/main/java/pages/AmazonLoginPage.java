@@ -15,15 +15,23 @@ public class AmazonLoginPage extends BasePage {
         super(driver);
     }
 
-    public void loginToAccount() {
-        waitForVisible(signInLink);
-        driver.findElement(signInLink).click();
-        waitForVisible(emailField);
-        driver.findElement(emailField).sendKeys("un");
-        driver.findElement(continueButton).click();
-        waitForVisible(passwordField);
-        driver.findElement(passwordField).sendKeys("pwd");
-        driver.findElement(signInSubmit).click();
+   public void loginToAccount() {
+    waitForVisible(signInLink);
+    driver.findElement(signInLink).click();
+
+    waitForVisible(emailField);
+
+    String username = System.getProperty("USERNAME");
+    String password = System.getProperty("Password");
+
+    driver.findElement(emailField).sendKeys(username);
+    driver.findElement(continueButton).click();
+
+    waitForVisible(passwordField);
+    driver.findElement(passwordField).sendKeys(password);
+
+    driver.findElement(signInSubmit).click();
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
