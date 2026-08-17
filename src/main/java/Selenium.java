@@ -23,6 +23,7 @@ public class Selenium {
         sortProducts();
         loginToAccount();
         closeDriver();
+        // Jenkins CI test
     }
 public static void initializeDriver() {
 
