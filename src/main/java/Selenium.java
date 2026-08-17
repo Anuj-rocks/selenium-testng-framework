@@ -24,9 +24,20 @@ public class Selenium {
         loginToAccount();
         closeDriver();
     }
+public static void initializeDriver() {
 
-    public static void initializeDriver() {
-        driver = new ChromeDriver();
+    System.setProperty("webdriver.chrome.driver",
+            "C:\\Browser driver\\chromedriver.exe");
+
+    driver = new ChromeDriver();
+
+    amazonHomePage = new AmazonHomePage(driver);
+    amazonResultsPage = new AmazonResultsPage(driver);
+    amazonLoginPage = new AmazonLoginPage(driver);
+}
+    
+{
+
         amazonHomePage = new AmazonHomePage(driver);
         amazonResultsPage = new AmazonResultsPage(driver);
         amazonLoginPage = new AmazonLoginPage(driver);

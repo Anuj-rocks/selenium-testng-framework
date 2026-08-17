@@ -19,7 +19,7 @@ public class AmazonLoginPage extends BasePage {
         waitForVisible(signInLink);
         driver.findElement(signInLink).click();
         waitForVisible(emailField);
-        driver.findElement(emailField).sendKeys("username");
+        driver.findElement(emailField).sendKeys("un");
         driver.findElement(continueButton).click();
         waitForVisible(passwordField);
         driver.findElement(passwordField).sendKeys("pwd");
