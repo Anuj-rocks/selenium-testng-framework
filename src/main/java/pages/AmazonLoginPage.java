@@ -15,20 +15,21 @@ public class AmazonLoginPage extends BasePage {
         super(driver);
     }
 
-   public void loginToAccount() {
+  public void loginToAccount() {
+
+    String USERNAME = System.getProperty("USERNAME");
+    String PASSWORD = System.getProperty("PASSWORD");
+
     waitForVisible(signInLink);
     driver.findElement(signInLink).click();
 
     waitForVisible(emailField);
+    driver.findElement(emailField).sendKeys(USERNAME);
 
-    String username = System.getProperty("USERNAME");
-    String password = System.getProperty("Password");
-
-    driver.findElement(emailField).sendKeys(username);
     driver.findElement(continueButton).click();
 
     waitForVisible(passwordField);
-    driver.findElement(passwordField).sendKeys(password);
+    driver.findElement(passwordField).sendKeys(PASSWORD);
 
     driver.findElement(signInSubmit).click();
 
@@ -49,5 +50,5 @@ public class AmazonLoginPage extends BasePage {
             System.out.println("Error: " + e.getMessage());
             throw e;
         }
-    }
-}
+  }}
+

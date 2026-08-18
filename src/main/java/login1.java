@@ -1,4 +1,4 @@
-import java.time.Duration;
+/*import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,4 +25,4 @@ public class login1 {
         //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@role='searchbox']")));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-}
+}*/
